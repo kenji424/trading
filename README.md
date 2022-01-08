@@ -3,6 +3,6 @@
 
 2. I created a summary of trading activities of the crypto-currencies in "usd-list.csv" with "create_a_summary_from_a_list.py". Then I sorted by the trading volume. Output file is "usd-Summary2.csv".
 
-
+3. I picked up top 20 liquid crypto-currencies, "top20usd.csv". I calculated daily returns of 20 currencies with "calc-returns.py". Output file is "returns.csv".
 
 
