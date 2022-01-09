@@ -6,3 +6,5 @@
 3. I picked up top 20 liquid crypto-currencies, "top20usd.csv". I calculated daily returns of 20 currencies with "calc-returns.py". Output file is "returns.csv".
 
 4. I calculated correlations between the 20 currencies excluding the last 1 year data with "correlations.py". Output file is "correlations.csv". All pairs show fairly high correlation coefficients, about 0.6.
+
+5. As crypto-currencies are highly correlated each other, I assume smaller currencies follow the direction btcusd is heading to because it is the most liquid currency.
