@@ -7,4 +7,4 @@
 
 4. I calculated correlations between the 20 currencies excluding the last 1 year data with "correlations.py". Output file is "correlations.csv". All pairs show fairly high correlation coefficients, about 0.6.
 
-5. As crypto-currencies are highly correlated each other, I assume smaller currencies follow the direction btcusd is heading to because it is the most liquid currency.
+5. As crypto-currencies are highly correlated each other, I assume smaller currencies follow the direction btcusd is heading to because it is the most liquid currency. When btcusd goes up/down more than threshold 1 and another currency goes up/down less than threshould 2, we initiate a long/short position. We liquidate this position in the next 1 minute interval. In order to avoid overfitting, I did backtesting with data between 2 years ago and 1 year ago and determine the parameters. I apply the parameters for last 1 year data.
