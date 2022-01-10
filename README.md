@@ -9,5 +9,5 @@
 
 5. As crypto-currencies are highly correlated with each other, I assume smaller currencies follow the direction btcusd is heading to because it is the most liquid currency. When btcusd goes up/down more than threshold 1 and another currency goes up/down less than threshould 2, we initiate a long/short position. We liquidate this position in the next 1 minute interval. In order to avoid overfitting, I did backtesting with data between 2 years ago and 1 year ago and determine the parameters with "trend_follower.py", and then I apply the parameters for the last 1 year data. Result was "btcusd-ethusdtrend_follow2Y.csv". According to the backtesting results, thereshould 1 - 30 bps and threshould 2 - 20 bps look good. When I applied the same parameters for the last 1 year data, results were "btcusd-ethusdtrend_follow1Y.csv". Commissions are not included in this calculation.
 
-6. I did the same calculation and created a summary, "trend_follow_summary.ods". On the other currencies, the same parameters looked good.
+6. I did the same calculation and created a summary, "trend_follow_summary.ods". The same parameters looked good on the other currencies as well. As a conclusion, we can say smaller currencies are following btcusd.
 
