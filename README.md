@@ -17,4 +17,6 @@
 
 9. As a next step, I applied 50 bps thresholds for last 1 year data of all currencies except for adausd, "mean_reversion_summary1Y.csv". adausd is included in the summary file just for a reference. With the last 1 year data, mean-reversion strategy didn't perform well in some currencies like btcusd, ethusd, dotusd, uniusd and xtzusd. In general, long side mean-reversion strategy worked better.
 
-10. I also did backtesting with 1 minute, 2 minutes and 4 minutes holding periods. Results are "mean_reversion_parameter_search_1min.csv", "mean_reversion_parameter_search_2mins.csv" and "mean_reversion_parameter_search_4mins.csv".
+10. I also did backtesting with 1 minute, 2 minutes and 4 minutes holding periods. Results are "mean_reversion_parameter_search_1min.csv", "mean_reversion_parameter_search_2mins.csv" and "mean_reversion_parameter_search_4mins.csv". Results with 1 minute holding period was the best.
+
+11. I did backtesting with 1 minute holding period with the last 1 year data.
