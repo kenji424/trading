@@ -15,4 +15,4 @@
 
 8. I also did reserch into mean-reversion strategy with "mean-reversion.py". I looked at previous 4 minutes prices and defined bench mark prices. Recent prices have more weights. If the price deviates more than thresholds, I initiated long/short positions. I skipped 1 minute trading opportunity twice. So the holding period is at least 2 minutes. I did backtesting excluding last 1 year data, "mean_reversion_summary_parameter_search.csv". It's fairly a reasonable decision to apply 50 bps thresholds on both sides for all currencies except for adausd.
 
-9. As a next step, I applied 50 bps thresholds for last 1 year data of all currencies except for adausd. adausd is included in the summary file just for a reference.
+9. As a next step, I applied 50 bps thresholds for last 1 year data of all currencies except for adausd, "mean_reversion_summary1Y.csv". adausd is included in the summary file just for a reference. With the last 1 year data, mean-reversion strategy didn't perform well in some currencies like btcusd, ethusd, dotusd, uniusd and xtzusd. In general, long side mean-reversion strategy worked better.
