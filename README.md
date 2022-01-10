@@ -13,4 +13,6 @@
 
 7. I did back testing on trend follower strategy with a longer holding period. This time I skipped the trading opportunities in the next 1 minute trading opportunities and held positions more than 1 minute. Results are "trend_follow_summary2.ods". I didn't see a clear tendency that the longer holding period is better in this strategy.
 
-8. I also did reserch into mean-reversion strategy. 
+8. I also did reserch into mean-reversion strategy with "mean-reversion.py". I looked at previous 4 minutes prices and defined bench mark prices. Recent prices have more weights. If the price deviates more than thresholds, I initiated long/short positions. I did backtesting excluding last 1 year data, "mean_reversion_summary_parameter_search.csv". It's fairly a reasonable decision to apply 50 bps thresholds on both sides for all currencies except for adausd.
+
+9. As a next step, I applied 50 bps thresholds for last 1 year data of all currencies except for adausd. adausd is included in the summary file just for a reference.
