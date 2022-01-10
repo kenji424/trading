@@ -12,3 +12,5 @@
 6. I did the same calculation on other currencies and created a summary, "trend_follow_summary.ods". The same parameters looked good on the other currencies as well. As a conclusion, we can say other smaller currencies are also following btcusd.
 
 7. I did back testing on trend follower strategy with a longer holding period. This time I skipped the trading opportunities in the next 1 minute trading opportunities and held positions more than 1 minute. Results are "trend_follow_summary2.ods". I didn't see a clear tendency that the longer holding period is better in this strategy.
+
+8. I also did reserch into mean-reversion strategy. 
