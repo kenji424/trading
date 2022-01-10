@@ -19,4 +19,4 @@
 
 10. I also did backtesting with 1 minute, 2 minutes and 4 minutes holding periods. Results are "mean_reversion_parameter_search_1min.csv", "mean_reversion_parameter_search_2mins.csv" and "mean_reversion_parameter_search_4mins.csv". Results with 1 minute holding period was the best.
 
-11. I did backtesting with 1 minute holding period with the last 1 year data.
+11. I did backtesting with 1 minute holding period with the last 1 year data, "mean_reversion_summary1Y1min.csv". Results were not significantly better than those with 3 minutes holding period. Mean-reversion strategy was not so good in the last 1 year.
