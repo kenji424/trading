@@ -4,16 +4,13 @@ import pandas as pd
 import numpy as np
 import sys
 
-
 NUM_OF_CURRENCIES = 20
 NUM_OF_RETURNS = 3185
-
 CORREL_RETURNS = 2820
 
 cur_name = []
 
 f = open('C:/Users/kawam/Documents/Nomura/analysis/top20usd.csv', 'r')
-
 data_list = f.readlines()
 
 for i in range(len(data_list)):
@@ -21,11 +18,9 @@ for i in range(len(data_list)):
 
 f.close()
 
-
 returns = [[-1 for i in range(NUM_OF_RETURNS)] for j in range(NUM_OF_CURRENCIES)]
 
 f = open('C:/Users/kawam/Documents/Nomura/analysis/returns.csv', 'r')
-
 data_list = f.readlines()
 
 for i in range(1, len(data_list)):
@@ -34,9 +29,7 @@ for i in range(1, len(data_list)):
     for j in range(len(NUM_OF_CURRENCIES)):        
         returns[j][i - 1] = float(inputs[j + 1])
 
-
 f.close()
-
 
 correlations = [[1 for i in range(NUM_OF_CURRENCIES)] for j in range(NUM_OF_RETURNS)]
 
@@ -62,7 +55,6 @@ for i in range(NUM_OF_CURRENCIES - 1):
         correlations[i][j] = corr
         correlations[j][i] = corr
         
-
 f = open('C:/Users/kawam/Documents/Nomura/analysis/correlations.csv', 'a')
 
 for i in range(NUM_OF_CURRENCIES + 1):
@@ -93,32 +85,3 @@ for i in range(NUM_OF_CURRENCIES + 1):
     f.write(output + '\n')
         
 f.close()
-        
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
