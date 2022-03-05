@@ -26,7 +26,6 @@ daily_trade_values_1Y = []
 
 
 for i in range(len(file_list)):
-#for i in range(10):
 
     cur_name.append(file_list[i][:len(file_list[i]) - 5])
     
@@ -67,7 +66,6 @@ for i in range(len(file_list)):
         if tm >= LAST_1Y_TIME_STAMP:
             trade_value_1Y += cl * vol
         
-
     end_time.append(tm)
     
     day = int((tm - st) / 86400000)
@@ -93,7 +91,6 @@ f = open('C:/Users/kawam/Documents/Nomura/analysis/usd-Summary.csv', 'w')
 f.write('Currency,StartTime,EndTime,Days,Open,Close,High,Low,TradeValue,DailyTradeValue,TradeValue1Y,DailyTradeValue1Y\n')
 
 for i in range(len(file_list)):
-#for i in range(10):
      
     f.write(cur_name[i] + ',' + str(start_time[i]) + ',' + str(end_time[i]) + ',' + 
             str(days[i]) + ',' + str(open_price[i]) + ',' + str(close_price[i]) + ',' + 
@@ -101,12 +98,3 @@ for i in range(len(file_list)):
             str(daily_trade_values[i]) + ',' + str(trade_values_1Y[i]) + ',' + str(daily_trade_values_1Y[i]) + ',' + '\n')
 
 f.close()
-
-            
-
-
-
-
-
-
-
