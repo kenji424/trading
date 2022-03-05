@@ -15,8 +15,6 @@ NUM_OF_RETURNS = 3185
 
 prices = [[-1 for i in range(NUM_OF_DATA_POINTS)] for j in range(NUM_OF_CURRENCIES)]
 returns = [[-1 for i in range(NUM_OF_RETURNS)] for j in range(NUM_OF_CURRENCIES)]
-
-
 cur_name = []
 
 f = open('C:/Users/kawam/Documents/Nomura/analysis/top20usd.csv', 'r')
@@ -30,23 +28,17 @@ f.close()
 
 
 for i in range(len(cur_name)):
-#for i in range(1):
-    
 
-    f = open('C:/Users/kawam/Documents/Nomura/archive/' + cur_name[i].rstrip('\r\n') + '.csv', 'r')
-    
+    f = open('C:/Users/kawam/Documents/Nomura/archive/' + cur_name[i].rstrip('\r\n') + '.csv', 'r')    
     data_list = f.readlines()
-    
     cur_day_end = START_TIME_STAMP
 
     p = 0
-    
     cl = 0
 
     for j in range(1, len(data_list)):
         
         inputs = list(data_list[j].split(','))
-        
         tm = int(inputs[0])
         last_cl = cl
         cl = float(inputs[2])
@@ -56,7 +48,6 @@ for i in range(len(cur_name)):
                 cur_day_end += ONE_D_MSECS
                 p += 1
             
-        
         if tm > cur_day_end and p <= NUM_OF_DATA_POINTS - 1:
             prices[i][p] = last_cl
             
@@ -64,15 +55,6 @@ for i in range(len(cur_name)):
                 if prices[i][p - 1] != -1 and prices[i][p] != -1:
                     returns[i][p - 1] = math.log(prices[i][p] / prices[i][p - 1])
                     
-                    '''
-                    print(p)
-                    print(cur_day_end)
-                    print(returns[i][p - 1])
-                    print(prices[i][p])
-                    print(prices[i][p - 1])
-                    print()
-                    '''
-
             cur_day_end += ONE_D_MSECS
             p += 1
             cl = -1
@@ -80,12 +62,9 @@ for i in range(len(cur_name)):
     f.close()
     
 
-
-
 # write returns into a file
 
 f = open('C:/Users/kawam/Documents/Nomura/analysis/returns.csv', 'a')
-
 fstr = 'TimeStamp,'
 
 for i in range(NUM_OF_CURRENCIES):
@@ -101,7 +80,6 @@ cur_day_end = START_TIME_STAMP
 for i in range(NUM_OF_RETURNS):
     
     cur_day_end += ONE_D_MSECS
-    
     fstr = str(cur_day_end) + ','
     
     for j in range(NUM_OF_CURRENCIES):
@@ -112,7 +90,6 @@ for i in range(NUM_OF_RETURNS):
             print('i = ' + str(i))
             print('j = ' + str(j))
             
-        
         if j != NUM_OF_CURRENCIES - 1:
 
             fstr += ','
@@ -120,11 +97,3 @@ for i in range(NUM_OF_RETURNS):
     f.write(fstr + '\n')
 
 f.close()    
-
-
-
-
-
-
-
-
